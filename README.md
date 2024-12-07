@@ -1,1 +1,1 @@
-hello world
+See /morse for details
