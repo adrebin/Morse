@@ -41,7 +41,7 @@ const MORSE_TO_LETTERS = Object.fromEntries(
   Object.entries(LETTERS_TO_MORSE).map(([key, value]) => [value, key])
 );
 
-const WORD_CHAR = "_";
+const WORD_CHAR = "/";
 const LETTER_GAP = " ";
 
 export function convertMorseToText(morseString) {
@@ -84,7 +84,7 @@ export function convertTextToMorse(text) {
     if (Object.keys(LETTERS_TO_MORSE).includes(upperChar)) {
       morseString += LETTERS_TO_MORSE[upperChar] + " ";
     } else if (char === " ") {
-      morseString += "_";
+      morseString += " / ";
     }
   }
 

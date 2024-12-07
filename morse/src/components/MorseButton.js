@@ -28,7 +28,7 @@ function MorseButton() {
     let appendText = "";
     if (timeSinceLast > WORD_LENGTH_MS) {
       if (currentText !== "") {
-        appendText += " _ "
+        appendText += " / "
       }
     } else if (timeSinceLast > LETTER_LENGTH_MS) {
       appendText += " "
