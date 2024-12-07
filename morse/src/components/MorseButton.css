@@ -1,0 +1,30 @@
+.MorseButton-clickerButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.MorseButton-pushable {
+  background: hsl(340deg 100% 32%);
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+.MorseButton-front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.25rem;
+  background: hsl(345deg 100% 47%);
+  color: white;
+  transform: translateY(-8px);
+}
+
+.MorseButton-pushable:active .MorseButton-front {
+  transform: translateY(-2px);
+}
