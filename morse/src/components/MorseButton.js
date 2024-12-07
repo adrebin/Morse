@@ -68,7 +68,13 @@ function MorseButton() {
 
   return (
     <div className="MorseButton">
-      <button className="MorseButton-pushable" onMouseDown={onPressStart} onMouseUp={onPressEnd} onTouchStart={onPressStart} onTouchEnd={onPressEnd}>
+      <button className="MorseButton-pushable" onMouseDown={onPressStart} onMouseUp={onPressEnd} onTouchStart={(e) => {
+        e.preventDefault();
+        onPressStart();
+      }} onTouchEnd={(e) => {
+        e.preventDefault();
+        onPressEnd();
+      }}>
         <span className="MorseButton-front" ></span>
       </button>
       <div>Morse text: {currentText}</div>
