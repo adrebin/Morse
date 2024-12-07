@@ -17,10 +17,9 @@ function App() {
             <p>Tap out morse code to convert to text</p>
             <p>(Only letters and numbers supported, can use keyboard instead of button)</p>
             <ResetButton onClick={() => {
-              console.log('updating key', resetKey);
               setResetKey((cur) => !cur);
             }} />
-            <p>.</p>
+            <p></p>
             <MorseButton key={resetKey} />
           </Tab>
           <Tab label="Text -> Morse">

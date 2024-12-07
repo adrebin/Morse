@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './MorseButton.css';
 import { convertMorseToText } from './morseUtils.js'
 
@@ -69,9 +69,7 @@ function MorseButton() {
   return (
     <div className="MorseButton">
       <button className="MorseButton-pushable" onMouseDown={onPressStart} onMouseUp={onPressEnd} >
-        <span className="MorseButton-front">
-          Push me
-        </span>
+        <span className="MorseButton-front"></span>
       </button>
       <div>Morse text: {currentText}</div>
       <input value={currentText} onKeyDown={(e) => e.stopPropagation()} onKeyUp={(e) => e.stopPropagation()} onChange={(event) => {
