@@ -66,9 +66,13 @@ function MorseButton() {
     };
   }, [onPressEnd]);
 
+  function absorbEvent(event) {
+    event.returnValue = false;
+  }
+
   return (
     <div className="MorseButton">
-      <button className="MorseButton-pushable" onMouseDown={onPressStart} onMouseUp={onPressEnd} >
+      <button className="MorseButton-pushable" onMouseDown={onPressStart} onMouseUp={onPressEnd} onTouchStart={absorbEvent} onTouchEnd={absorbEvent} onTouchMove={absorbEvent} onTouchCancel={absorbEvent}>
         <span className="MorseButton-front"></span>
       </button>
       <div>Morse text: {currentText}</div>
