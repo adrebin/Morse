@@ -45,6 +45,10 @@ const LETTERS_TO_MORSE = {
   "/": "-..-.",
   "\"": ".-..-.",
   "!": "-.-.--",
+  "(": "-.--.",
+  ")": "-.--.-",
+  "+": ".-.-.",
+  "@": ".--.-.",
 }
 
 const MORSE_TO_LETTERS = Object.fromEntries(
@@ -65,7 +69,7 @@ export function convertMorseToText(morseString) {
       currentLetterMorse += char;
     } else if (char === LETTER_GAP) {
       if (currentLetterMorse !== "") {
-        const convertedLetter = MORSE_TO_LETTERS[currentLetterMorse] ?? "?";
+        const convertedLetter = MORSE_TO_LETTERS[currentLetterMorse] ?? "[not sure]";
         textString += convertedLetter;
         currentLetterMorse = "";
       }
@@ -76,7 +80,7 @@ export function convertMorseToText(morseString) {
   }
 
   if (currentLetterMorse !== "") {
-    const convertedLetter = MORSE_TO_LETTERS[currentLetterMorse] ?? "?";
+    const convertedLetter = MORSE_TO_LETTERS[currentLetterMorse] ?? "[not sure]";
     textString += convertedLetter;
   }
 
@@ -84,20 +88,19 @@ export function convertMorseToText(morseString) {
 }
 
 export function convertTextToMorse(text) {
-  console.log('converting', text);
   let morseString = "";
 
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
     const upperChar = char.toUpperCase();
-    console.log('is in?', char, upperChar, Object.keys(LETTERS_TO_MORSE))
     if (Object.keys(LETTERS_TO_MORSE).includes(upperChar)) {
       morseString += LETTERS_TO_MORSE[upperChar] + " ";
     } else if (char === " ") {
       morseString += " / ";
+    } else {
+      morseString += "[not sure]"
     }
   }
 
-  console.log("converted:", morseString);
   return morseString;
 }
