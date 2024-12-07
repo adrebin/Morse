@@ -68,7 +68,6 @@ function MorseButton() {
 
   function absorbEvent(event) {
     event.returnValue = false;
-    event.stopPropagation();
     event.preventDefault();
   }
 
