@@ -1,6 +1,7 @@
 {
   "name": "morse",
   "version": "0.1.0",
+  "homepage": "https://adrebin.github.io/Morse",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
