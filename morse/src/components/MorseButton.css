@@ -22,3 +22,11 @@
 .MorseButton-pushable:active .MorseButton-front {
   transform: translateY(-2px);
 }
+
+.display-text {
+  padding-top: 20px;
+}
+
+.converted-text {
+  padding-top: 20px;
+}

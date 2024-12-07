@@ -14,17 +14,19 @@ function App() {
       <header className="App-header">
         <Tabs>
           <Tab label="Morse -> Text">
-            <p>Tap out morse code to convert to text</p>
-            <p>(Only letters and numbers supported, can use keyboard instead of button)</p>
-            <ResetButton onClick={() => {
-              setResetKey((cur) => !cur);
-            }} />
-            <p></p>
+            <div className="text-header">
+              <p>Tap out morse code to convert to text</p>
+              <p className="helper-text">(Can use keyboard instead of button on desktop, press lightly for dashes on mobile)</p>
+            </div>
+            <div className="reset-button">
+              <ResetButton onClick={() => {
+                setResetKey((cur) => !cur);
+              }} />
+            </div>
             <MorseButton key={resetKey} />
           </Tab>
           <Tab label="Text -> Morse">
             <p>Enter text to convert to morse code</p>
-            <p>(Only letters and numbers supported)</p>
             <TextConverter />
           </Tab>
         </Tabs>

@@ -26,6 +26,20 @@
   color: #61dafb;
 }
 
+.text-header {
+  padding-bottom: 50px;
+}
+
+.helper-text {
+  font-size: 20px;
+}
+
+.reset-button {
+  padding-bottom: 50px;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

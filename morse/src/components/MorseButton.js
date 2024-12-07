@@ -77,12 +77,14 @@ function MorseButton() {
       }}>
         <span className="MorseButton-front" ></span>
       </button>
-      <div>Morse text: {currentText}</div>
-      <input value={currentText} onKeyDown={(e) => e.stopPropagation()} onKeyUp={(e) => e.stopPropagation()} onChange={(event) => {
-        event.stopPropagation();
-        setCurrentText(event.target.value)
-      }}></input>
-      <div>Converted text: {convertMorseToText(currentText)}</div>
+      <div className='display-text'>
+        <div>Morse text: {currentText}</div>
+        <input value={currentText} onKeyDown={(e) => e.stopPropagation()} onKeyUp={(e) => e.stopPropagation()} onChange={(event) => {
+          event.stopPropagation();
+          setCurrentText(event.target.value)
+        }}></input>
+        <div className='converted-text'>Converted text: {convertMorseToText(currentText)}</div>
+      </div>
     </div>
   );
 }
