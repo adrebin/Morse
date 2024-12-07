@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Morse/static/css/main.0495d8a6.css",
-    "main.js": "/Morse/static/js/main.69ba5122.js",
+    "main.js": "/Morse/static/js/main.52606bbd.js",
     "static/js/488.5cd39e28.chunk.js": "/Morse/static/js/488.5cd39e28.chunk.js",
     "index.html": "/Morse/index.html",
     "main.0495d8a6.css.map": "/Morse/static/css/main.0495d8a6.css.map",
-    "main.69ba5122.js.map": "/Morse/static/js/main.69ba5122.js.map",
+    "main.52606bbd.js.map": "/Morse/static/js/main.52606bbd.js.map",
     "488.5cd39e28.chunk.js.map": "/Morse/static/js/488.5cd39e28.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0495d8a6.css",
-    "static/js/main.69ba5122.js"
+    "static/js/main.52606bbd.js"
   ]
 }
